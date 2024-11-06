@@ -10,3 +10,7 @@ This repository features completed tasks from the STC89C52 training manual, show
 ## Task 2: Logic Analyzer Installation
 - Download and install Logic 1.2.18 software for the logic analyzer.
 - Configure the logic analyzer for debugging and signal analysis.
+
+## Task 3: LED Blinking
+- Blink LED D1 with a 500 ms delay.
+- Measure the delay using a logic analyzer and attach screenshots showing the delay.
