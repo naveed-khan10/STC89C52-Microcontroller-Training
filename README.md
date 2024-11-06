@@ -1,5 +1,4 @@
 # STC89C52 Microcontroller Training
-![Logic Analyzer Screenshot for 500 ms LED Blinking](‪C:/Users/CST-DT12/Desktop/8051 .png)
 This repository features completed tasks from the STC89C52 training manual, showcasing various embedded systems concepts and practical applications. Each task folder includes the code, simulations, and associated resources. All tasks are executed on the STC89C52 microcontroller using the C programming language.
 
 # Project Review: 
