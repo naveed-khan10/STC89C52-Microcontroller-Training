@@ -1,0 +1,49 @@
+C51 COMPILER V9.60.7.0   TASK_4                                                            03/08/2024 10:46:54 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE TASK_4
+OBJECT MODULE PLACED IN .\Objects\Task 4.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Task 4.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\Ta
+                    -sk 4.lst) TABS(2) OBJECT(.\Objects\Task 4.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          
+   4          #define LED1 P2
+   5          
+   6          
+   7          void Delay(unsigned int);
+   8          
+   9          void main(void){
+  10   1        while(1)
+  11   1        {
+  12   2            LED1 = 0xAA;
+  13   2            Delay(500);
+  14   2            LED1 = 0x55;
+  15   2            Delay(500);
+  16   2            
+  17   2        }
+  18   1      }
+  19          
+  20          void Delay(unsigned int ali)
+  21          {
+  22   1        unsigned int j,k;
+  23   1        for(j=0; j<ali; j++)
+  24   1          for(k=0; k<114; k++);
+  25   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     54    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
