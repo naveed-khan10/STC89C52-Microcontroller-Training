@@ -17,3 +17,7 @@ This repository features completed tasks from the STC89C52 training manual, show
 
 ## Task 4: LED Pattern
 - Alternated LEDs D1, D3, D5, D7 ON and D2, D4, D6, D8 OFF with a delay.
+
+## Task 5: Button Interfacing Using Polling
+- Controlled LED D1 using button K1 with polling.
+- Added debouncing to avoid multiple triggers on a single press.
