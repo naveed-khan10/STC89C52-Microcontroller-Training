@@ -14,3 +14,6 @@ This repository features completed tasks from the STC89C52 training manual, show
 ## Task 3: LED Blinking
 - Blink LED D1 with a 500 ms delay.
 - Measure the delay using a logic analyzer and attach screenshots showing the delay.
+
+## Task 4: LED Pattern
+- Alternated LEDs D1, D3, D5, D7 ON and D2, D4, D6, D8 OFF with a delay.
