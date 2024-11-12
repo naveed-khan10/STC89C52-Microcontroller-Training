@@ -21,3 +21,7 @@ This repository features completed tasks from the STC89C52 training manual, show
 ## Task 5: Button Interfacing Using Polling
 - Controlled LED D1 using button K1 with polling.
 - Added debouncing to avoid multiple triggers on a single press.
+
+## Task 6: Button Interfacing Using Interrupt
+- This program toggles LED D1 on or off with each press of button K1, using interrupts to detect button presses and debouncing to ensure accurate detection.
+- Each button press toggles the LED state, providing efficient and responsive LED control for embedded applications.
