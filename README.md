@@ -26,5 +26,5 @@ This repository features completed tasks from the STC89C52 training manual, show
 - This program toggles LED D1 on or off with each press of button K1, using interrupts to detect button presses and debouncing to ensure accurate detection.
 - Each button press toggles the LED state, providing efficient and responsive LED control for embedded applications.
 
-## Task 7 : LED control using buttons (polling) 
+## Task 7: LED control using buttons (polling) 
 - Each button K1-K4 toggles LEDs D1-D4, respectively, using polling with debounce to ensure stable operation.
