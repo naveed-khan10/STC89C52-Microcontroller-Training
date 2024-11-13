@@ -21,3 +21,6 @@ This repository features completed tasks from the STC89C52 training manual, show
 ## Task 5: Button Interfacing Using Polling
 - Controlled LED D1 using button K1 with polling.
 - Added debouncing to avoid multiple triggers on a single press.
+
+## Task 7 : LED control using buttons (polling) 
+- Each button K1-K4 toggles LEDs D1-D4, respectively, using polling with debounce to ensure stable operation.

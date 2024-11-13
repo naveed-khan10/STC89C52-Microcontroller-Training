@@ -1,0 +1,98 @@
+C51 COMPILER V9.60.7.0   TASK_7                                                            03/18/2024 14:51:46 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE TASK_7
+OBJECT MODULE PLACED IN .\Objects\Task 7.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Task 7.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\Ta
+                    -sk 7.lst) TABS(2) OBJECT(.\Objects\Task 7.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          // LED
+   4          sbit led1 = P2^0; 
+   5          sbit led2 = P2^1; 
+   6          sbit led3 = P2^2; 
+   7          sbit led4 = P2^3; 
+   8          
+   9          // Button
+  10          sbit btn1 = P3^1; 
+  11          sbit btn2 = P3^0; 
+  12          sbit btn3 = P3^2;
+  13          sbit btn4 = P3^3; 
+  14          
+  15          void MSDelay(unsigned int);
+  16          
+  17          void main()
+  18          {
+  19   1          while(1)
+  20   1          {
+  21   2              // Check button K1 state
+  22   2              if(btn1 == 0) // Button pressed
+  23   2              {
+  24   3                  MSDelay(50); // Delay for debouncing
+  25   3                  if(btn1 == 0) // Check button state again after debouncing
+  26   3                  {
+  27   4                      led1 = ~led1; // Toggle LED1 state
+  28   4                      while(btn1 == 0); // Wait until button is released
+  29   4                  }
+  30   3              }
+  31   2      
+  32   2              // Check button K2 state
+  33   2              if(btn2 == 0)
+  34   2              {
+  35   3                  MSDelay(50);
+  36   3                  if(btn2 == 0)
+  37   3                  {
+  38   4                      led2 = ~led2; // Toggle LED2 state
+  39   4                      while(btn2 == 0);
+  40   4                  }
+  41   3              }
+  42   2      
+  43   2              // Check button K3 state
+  44   2              if(btn3 == 0)
+  45   2              {
+  46   3                  MSDelay(50);
+  47   3                  if(btn3 == 0)
+  48   3                  {
+  49   4                      led3 = ~led3; // Toggle LED3 state
+  50   4                      while(btn3 == 0);
+  51   4                  }
+  52   3              }
+  53   2      
+  54   2              // Check button K4 state
+C51 COMPILER V9.60.7.0   TASK_7                                                            03/18/2024 14:51:46 PAGE 2   
+
+  55   2              if(btn4 == 0)
+  56   2              {
+  57   3                  MSDelay(50);
+  58   3                  if(btn4 == 0)
+  59   3                  {
+  60   4                      led4 = ~led4; // Toggle LED4 state
+  61   4                      while(btn4 == 0);
+  62   4                  }
+  63   3              }
+  64   2          }
+  65   1      }
+  66          
+  67          void MSDelay(unsigned int itime) {
+  68   1          unsigned int i, j;
+  69   1          for(i = 0; i < itime; i++) {
+  70   2              for(j = 0; j < 114; j++);
+  71   2          }
+  72   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     94    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
