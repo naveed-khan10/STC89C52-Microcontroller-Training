@@ -28,3 +28,7 @@ This repository features completed tasks from the STC89C52 training manual, show
 
 ## Task 7: LED control using buttons (polling) 
 - Each button K1-K4 toggles LEDs D1-D4, respectively, using polling with debounce to ensure stable operation.
+
+## Task 8: LED control using buttons (interrupts) 
+- Buttons K1-K4 control LEDs D1-D4 with interrupts or polling if interrupts are unavailable.
+- Debouncing is applied to ensure stable toggling for each LED.
