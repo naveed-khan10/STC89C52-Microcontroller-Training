@@ -1,5 +1,7 @@
 # STC89C52 Microcontroller Training
 This repository features completed tasks from the STC89C52 training manual, showcasing various embedded systems concepts and practical applications. Each task folder includes the code, simulations, and associated resources. All tasks are executed on the STC89C52 microcontroller using the C programming language.
+![STC89C52](https://github.com/user-attachments/assets/6e668ca1-8fcd-40de-aa70-d2430b4a7f5b)
+
 
 # Project Review: 
 ## Task 1: Development Environment Setup & Microcontroller Study
