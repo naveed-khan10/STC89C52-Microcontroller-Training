@@ -32,3 +32,8 @@ This repository features completed tasks from the STC89C52 training manual, show
 ## Task 8: LED control using buttons (interrupts) 
 - Buttons K1-K4 control LEDs D1-D4 with interrupts or polling if interrupts are unavailable.
 - Debouncing is applied to ensure stable toggling for each LED.
+
+## Task 9: Timer interrupt 
+- Configured a timer to generate a 10 ms interrupt and toggle LED D1 in the ISR.
+- Utilized auto-reload mode to eliminate the need for manual register reloading.
+- Implemented an efficient timer-based LED toggle using an interrupt-driven approach.

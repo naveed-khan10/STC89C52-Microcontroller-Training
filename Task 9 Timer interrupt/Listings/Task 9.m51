@@ -1,0 +1,99 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    03/28/2024  11:24:40  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Task 9.obj TO .\Objects\Task 9 PRINT (.\Listings\Task 9.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Task 9.obj (TASK_9)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Task 9 (TASK_9)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+                    000EH     07F2H                  *** GAP ***
+            CODE    0800H     0022H     UNIT         ?PR?TIMER_0?TASK_9
+            CODE    0822H     000CH     UNIT         ?PR?MAIN?TASK_9
+            CODE    082EH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Task 9 (TASK_9)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?TASK_9
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Task 9 (TASK_9)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TASK_9
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:0800H         PUBLIC        Timer_0
+  D:00B8H         PUBLIC        IP
+  C:0822H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  03/28/2024  11:24:40  PAGE 2
+
+
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:00A0H.0       PUBLIC        led_1
+  D:008CH         PUBLIC        TH0
+  B:0088H.4       PUBLIC        TR0
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          TIMER_0
+  -------         DO            
+  D:0007H         SYMBOL        x
+  D:0006H         SYMBOL        y
+  -------         ENDDO         
+  C:0800H         LINE#         5
+  C:080BH         LINE#         8
+  C:080DH         LINE#         9
+  C:0817H         LINE#         11
+  C:0819H         LINE#         12
+  -------         ENDPROC       TIMER_0
+  -------         PROC          MAIN
+  C:0822H         LINE#         14
+  C:0822H         LINE#         15
+  C:0825H         LINE#         16
+  C:0828H         LINE#         17
+  C:082BH         LINE#         18
+  C:082DH         LINE#         19
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        TASK_9
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0031H BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=64
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
