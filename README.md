@@ -39,3 +39,7 @@ This repository features completed tasks from the STC89C52 training manual, show
 - Configured a timer to generate a 10 ms interrupt and toggle LED D1 in the ISR.
 - Utilized auto-reload mode to eliminate the need for manual register reloading.
 - Implemented an efficient timer-based LED toggle using an interrupt-driven approach.
+
+## Task 10: Delay Generation with Timer
+- Generated delays of 100 ms and 1000 ms using the timer interrupt.
+- Controlled multiple LEDs with different timing intervals (LED D1: 10 ms, LED D2: 100 ms, LED D3: 1000 ms).
