@@ -43,3 +43,6 @@ This repository features completed tasks from the STC89C52 training manual, show
 ## Task 10: Delay Generation with Timer
 - Generated delays of 100 ms and 1000 ms using the timer interrupt.
 - Controlled multiple LEDs with different timing intervals (LED D1: 10 ms, LED D2: 100 ms, LED D3: 1000 ms).
+
+## Task 11: Button Debouncing Using Timer Interrupt
+- Implemented debouncing for button K1 using a timer interrupt, ensuring reliable detection of press and release events.
