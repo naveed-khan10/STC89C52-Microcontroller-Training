@@ -1,0 +1,83 @@
+C51 COMPILER V9.60.7.0   TASK_10B                                                          03/29/2024 10:53:35 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE TASK_10B
+OBJECT MODULE PLACED IN .\Objects\Task 10b.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Task 10b.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\
+                    -Task 10b.lst) TABS(2) OBJECT(.\Objects\Task 10b.obj)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          
+   3          int cntr_100ms = 0;
+   4          int cntr_1000ms = 0;
+   5          char flag_100_ms = 0;
+   6          char flag_1000_ms = 0;
+   7          
+   8          sbit LED_D1 = P2^0;
+   9          sbit LED_D2 = P2^1;
+  10          sbit LED_D3 = P2^2;
+  11          sbit LED_D4 = P2^3;
+  12          
+  13          void ISR_timer0(void) interrupt 1 // Interrupt service routine of 10ms overflow
+  14          { 
+  15   1          cntr_100ms++;
+  16   1          cntr_1000ms++;
+  17   1      
+  18   1          if (cntr_100ms >= 10) // If counter reaches 10 it means 100 ms have passed
+  19   1          {
+  20   2              LED_D1 = ~LED_D1; // Toggle the LED D1
+  21   2              flag_100_ms = 1; // Raise the 100 ms flag
+  22   2              cntr_100ms = 0;  // Restart this counter
+  23   2          }
+  24   1          
+  25   1          if (cntr_1000ms >= 100) // If this counter reaches 100 it means 1000 ms have passed
+  26   1          {
+  27   2              LED_D2 = ~LED_D2; // Toggle the LED D2
+  28   2              cntr_1000ms = 0;  // Restart this counter
+  29   2              flag_1000_ms = 1; // Raise the 1000 ms flag
+  30   2          }
+  31   1      }
+  32          
+  33          void main(void)
+  34          {
+  35   1          IE = 0x82;      // Enable Timer 0 interrupt (0x82 = 1000 0010)
+  36   1          TMOD = 0x02;    // Set Timer 0 mode to 8-bit auto reload
+  37   1          TH0 = 0;      // Set initial value for Timer 0 high byte
+  38   1          TR0 = 1;
+  39   1        
+  40   1        
+  41   1          while(1)
+  42   1          {
+  43   2              if (flag_100_ms)
+  44   2              {
+  45   3                  flag_100_ms = 0;
+  46   3                  LED_D3 = ~LED_D3; // Toggle the LED D3
+  47   3                  // This block of code will execute after every 100 ms
+  48   3              }
+  49   2              
+  50   2              if (flag_1000_ms)
+  51   2              {
+  52   3                  flag_1000_ms = 0;
+  53   3                  LED_D4 = ~LED_D4; // Toggle the LED D4
+  54   3                  // This block of code will execute after every 1000 ms
+C51 COMPILER V9.60.7.0   TASK_10B                                                          03/29/2024 10:53:35 PAGE 2   
+
+  55   3              }
+  56   2          }
+  57   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    104    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      6    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
