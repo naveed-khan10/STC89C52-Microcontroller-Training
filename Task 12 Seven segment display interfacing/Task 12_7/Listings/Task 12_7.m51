@@ -1,0 +1,176 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    04/26/2024  14:33:10  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\Task 12_7.obj TO .\Objects\Task 12_7 PRINT (.\Listings\Task
+>>  12_7.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\Task 12_7.obj (TASK_12_7)
+
+
+LINK MAP OF MODULE:  .\Objects\Task 12_7 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0066H     UNIT         ?PR?MAIN?TASK_12_7
+            CODE    0866H     0020H     UNIT         ?PR?_MS_DELAY?TASK_12_7
+            CODE    0886H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Task 12_7 (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?TASK_12_7
+
+?PR?MAIN?TASK_12_7
+  +--> ?PR?_MS_DELAY?TASK_12_7
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Task 12_7 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0886H         SEGMENT       ?C_C51STARTUP
+  I:0008H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/26/2024  14:33:10  PAGE 2
+
+
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0889H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0886H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0886H         LINE#         133
+  C:0888H         LINE#         134
+  C:0889H         LINE#         135
+  C:088AH         LINE#         136
+  C:088CH         LINE#         185
+  C:088FH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        TASK_12_7
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  B:00A0H.2       PUBLIC        p1
+  B:00A0H.3       PUBLIC        p2
+  B:00A0H.4       PUBLIC        p3
+  C:0800H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0866H         PUBLIC        _ms_delay
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _MS_DELAY
+  D:0006H         SYMBOL        delay_time
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0866H         LINE#         9
+  C:0866H         LINE#         11
+  C:0870H         LINE#         12
+  C:087EH         LINE#         13
+  C:0885H         LINE#         14
+  -------         ENDPROC       _MS_DELAY
+  -------         PROC          MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  04/26/2024  14:33:10  PAGE 3
+
+
+  C:0800H         LINE#         16
+  C:0800H         LINE#         19
+  C:0800H         LINE#         20
+  C:0802H         LINE#         21
+  C:0804H         LINE#         22
+  C:0806H         LINE#         23
+  C:0809H         LINE#         24
+  C:0810H         LINE#         26
+  C:0812H         LINE#         27
+  C:0814H         LINE#         28
+  C:0816H         LINE#         29
+  C:0819H         LINE#         30
+  C:081CH         LINE#         32
+  C:081EH         LINE#         33
+  C:0820H         LINE#         34
+  C:0822H         LINE#         35
+  C:0825H         LINE#         36
+  C:0828H         LINE#         38
+  C:082AH         LINE#         39
+  C:082CH         LINE#         40
+  C:082EH         LINE#         41
+  C:0831H         LINE#         42
+  C:0834H         LINE#         44
+  C:0836H         LINE#         45
+  C:0838H         LINE#         46
+  C:083AH         LINE#         47
+  C:083DH         LINE#         48
+  C:0840H         LINE#         50
+  C:0842H         LINE#         51
+  C:0844H         LINE#         52
+  C:0846H         LINE#         53
+  C:0849H         LINE#         54
+  C:084CH         LINE#         56
+  C:084EH         LINE#         57
+  C:0850H         LINE#         58
+  C:0852H         LINE#         59
+  C:0855H         LINE#         60
+  C:0858H         LINE#         62
+  C:085AH         LINE#         63
+  C:085CH         LINE#         64
+  C:085EH         LINE#         65
+  C:0861H         LINE#         66
+  C:0864H         LINE#         69
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        TASK_12_7
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0095H BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=149
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

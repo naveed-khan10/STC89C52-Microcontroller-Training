@@ -46,3 +46,7 @@ This repository features completed tasks from the STC89C52 training manual, show
 
 ## Task 11: Button Debouncing Using Timer Interrupt
 - Implemented debouncing for button K1 using a timer interrupt, ensuring reliable detection of press and release events.
+
+## Task 12: Seven Segment Display Interfacing
+- Controlled the 7-segment displays using multiplexing.
+- Displayed numbers and implemented a lookup table for digits 0-9.
