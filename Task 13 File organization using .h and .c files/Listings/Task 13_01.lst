@@ -1,0 +1,39 @@
+C51 COMPILER V9.60.7.0   TASK_13_01                                                        05/17/2024 16:33:40 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE TASK_13_01
+OBJECT MODULE PLACED IN .\Objects\Task 13_01.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Task 13_01.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listing
+                    -s\Task 13_01.lst) TABS(2) OBJECT(.\Objects\Task 13_01.obj)
+
+line level    source
+
+   1          // main.c
+   2          
+   3          #include "reg52.h"  // Include microcontroller register definitions
+   4          
+   5          void delay(unsigned int count) {
+   6   1          unsigned int i, j;
+   7   1          for (i = 0; i < count; i++) {
+   8   2              for (j = 0; j < 500; j++) {
+   9   3                  // Adjust this nested loop delay for your microcontroller's clock speed
+  10   3              }
+  11   2          }
+  12   1      }
+  13          
+  14          void main() {
+  15   1          // Configure P1.0 as output for controlling the LED
+  16   1          P1_0 = 0;  // Ensure LED is initially OFF
+*** ERROR C202 IN LINE 16 OF Task 13_01.c: 'P1_0': undefined identifier
+  17   1      
+  18   1          while (1) {
+  19   2              P1_0 = 1;     // Turn ON the LED (P1.0)
+*** ERROR C202 IN LINE 19 OF Task 13_01.c: 'P1_0': undefined identifier
+  20   2              delay(500);   // Delay for a while (adjust as needed for blinking speed)
+  21   2              P1_0 = 0;     // Turn OFF the LED
+*** ERROR C202 IN LINE 21 OF Task 13_01.c: 'P1_0': undefined identifier
+  22   2              delay(500);   // Delay again
+  23   2          }
+  24   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  3 ERROR(S)
