@@ -1,0 +1,65 @@
+C51 COMPILER V9.60.7.0   TASK_14_04                                                        10/07/2024 14:17:42 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE TASK_14_04
+OBJECT MODULE PLACED IN .\Objects\Task 14_04.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Task 14_04.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listing
+                    -s\Task 14_04.lst) TABS(2) OBJECT(.\Objects\Task 14_04.obj)
+
+line level    source
+
+   1          /*..This file(T_14_4.c) serves as a Main file..*/
+   2          
+   3          #include "LCD.h"
+   4          
+   5          int main() {
+   6   1          while(1){
+   7   2          lcd_init();    // Initialize the LCD
+   8   2          lcd_clear(); // Clear the LCD
+   9   2        
+  10   2          // Example usage
+  11   2          lcd_write(0, 0, 'H');  // Write 'H' at the beginning of the first line
+  12   2          lcd_write(0, 1, 'e');  // Write 'e' at the second position of the first line
+  13   2          lcd_write(0, 2, 'l');  // Write 'l' at the third position of the first line
+  14   2          lcd_write(0, 3, 'l');  // Write 'l' at the fourth position of the first line
+  15   2          lcd_write(0, 4, 'o');  // Write 'o' at the fifth position of the first line
+  16   2          lcd_write(0, 5, ' ');  
+  17   2          lcd_write(0, 6, 'E');  
+  18   2          lcd_write(0, 7, 'v');  
+  19   2          lcd_write(0, 8, 'e');  
+  20   2          lcd_write(0, 9, 'r');  
+  21   2          lcd_write(0, 10, 'y');
+  22   2          lcd_write(0, 11, 'o');  
+  23   2          lcd_write(0, 12, 'n');  
+  24   2          lcd_write(0, 13, 'e'); 
+  25   2            
+  26   2          // Set cursor to the beginning of the second line
+  27   2          lcd_write(1, 0, 'H');  
+  28   2          lcd_write(1, 1, 'o');  
+  29   2          lcd_write(1, 2, 'w');  
+  30   2          lcd_write(1, 3, ' ');  
+  31   2          lcd_write(1, 4, 'A');  
+  32   2          lcd_write(1, 5, 'r');  
+  33   2          lcd_write(1, 6, 'e');  
+  34   2          lcd_write(1, 7, ' ');  
+  35   2          lcd_write(1, 8, 'Y');  
+  36   2          lcd_write(1, 9, 'o');  
+  37   2          lcd_write(1, 10, 'u');  
+  38   2          lcd_write(1, 11, '?');  
+  39   2      
+  40   2            }
+  41   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    242    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

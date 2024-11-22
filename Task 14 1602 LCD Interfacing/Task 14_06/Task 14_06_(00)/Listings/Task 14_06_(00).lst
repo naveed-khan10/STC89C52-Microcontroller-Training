@@ -1,0 +1,36 @@
+C51 COMPILER V9.60.7.0   TASK_14_06__00_                                                   10/07/2024 14:24:10 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE TASK_14_06__00_
+OBJECT MODULE PLACED IN .\Objects\Task 14_06_(00).obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE Task 14_06_(00).c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Li
+                    -stings\Task 14_06_(00).lst) TABS(2) OBJECT(.\Objects\Task 14_06_(00).obj)
+
+line level    source
+
+   1          #include "LCD.h"
+   2          
+   3          void main()
+   4          {
+   5   1          lcd_init();
+   6   1        show("Custom Character");
+   7   1          while(1) 
+   8   1            {
+   9   2             store();  
+*** WARNING C206 IN LINE 9 OF Task 14_06_(00).c: 'store': missing function-prototype
+  10   2          }
+  11   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     17    ----
+   CONSTANT SIZE    =     17    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
